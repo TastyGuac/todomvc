@@ -13,13 +13,13 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm run build
+          command: npm run builde
           name: Build app
       - persist_to_workspace:
           root: ~/project
           paths:
             - .
 workflows:
-  build_and_test:
+  build:
     jobs:
       - build_and_test
